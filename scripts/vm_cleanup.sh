@@ -1,6 +1,8 @@
 #!/bin/bash
+apt-get purge installation-report
 apt-get -y autoremove --purge
 apt-get -y clean
+find /var/lib/apt/lists -type f -exec rm -v {} \;
 
 # Removing leftover leases and persistent rules
 echo "cleaning up dhcp leases"
