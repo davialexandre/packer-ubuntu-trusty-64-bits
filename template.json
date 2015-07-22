@@ -1,4 +1,7 @@
 {
+  "variables": {
+    "build_version": null
+  },
   "builders": [
     {
       "type": "vmware-iso",
@@ -60,7 +63,8 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "keep_input_artifact": true
+      "keep_input_artifact": true,
+      "output": "trusty64-{{user `build_version`}}-{{.Provider}}.box"
     }
   ]
 }
