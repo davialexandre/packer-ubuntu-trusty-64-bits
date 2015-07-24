@@ -7,6 +7,7 @@ the vmware provider.
 
 Usage
 =====
+
 Clone this repo and execute *build.sh*. It will create a file 
 named *trusty65-BUILD_VERSION-vmware.box*, where *BUILD_VERSION* 
 is the short hash of current commit of your repo clone.
@@ -17,3 +18,9 @@ a *BUILD_VERSION* using a user variable:
 ```
 packer build -var build_version=BUILD_VERSION template.json
 ```
+
+Acknowledgement
+===============
+
+The provisioning scripts and the preseed.cfg file were heavily 
+based on the code from <https://github.com/mitchellh/packer-ubuntu-12.04-docker>
